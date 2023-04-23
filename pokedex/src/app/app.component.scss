@@ -1,0 +1,33 @@
+@import "./../assets/styles/var.scss";
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+    background: linear-gradient(90deg, rgba(119,0,0,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(122, 0, 0);
+    width: 300px;
+    height: 60px;
+    border: 3px solid black;
+    border-radius:70px;
+    padding: 0 5px;
+    
+    h1{
+        font-size: 2.5em;
+        color: $texto-blanco;
+        -webkit-text-stroke: 1.5px black;
+    }
+
+    img{
+        height: 60px;
+    }
+}
+
