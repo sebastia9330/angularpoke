@@ -1,1 +1,9 @@
-<p>tarjeta-pokemon works!</p>
+<div id="container" class="seleccionado">
+    <img class="flecha" src="./../../../assets/img/play-button.svg">
+    <div id="tarjeta">
+        <div></div>
+        <img class="poke" src="./../../../assets/img/charmander.png">
+        <span>No. 001</span>
+        <span *ngIf="data">{{data.name}}</span>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Resultado } from 'src/app/interfaces/pokeapi';
 
 @Component({
   selector: 'app-tarjeta-pokemon',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./tarjeta-pokemon.component.scss']
 })
 export class TarjetaPokemonComponent {
+
+  @Input() data?:Resultado;
 
 }

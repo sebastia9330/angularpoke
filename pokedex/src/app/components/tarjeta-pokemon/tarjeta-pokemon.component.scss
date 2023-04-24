@@ -1,0 +1,44 @@
+#container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    &.seleccionado::before{
+        position: absolute;
+        content: "";
+        width: calc(100% + 10px);
+        height: 120%;
+        left: -5px;
+        background-color: #ffee0065;
+        border-radius: 5px;
+    }
+    
+    .flecha{
+        height: 30px;
+        padding-right: 10px;
+    }
+}
+
+
+
+#tarjeta{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0d6;
+    border-radius: 25px 5px 5px 25px;
+    width: 100%;
+    font-size: large;
+    padding: 10px;
+
+    .poke{
+        height: 30px;
+    }
+
+    div{
+        width: 30px;
+        height: 30px;
+        background-color: #7979794b;
+        border-radius: 50%;
+    
+    
+}
+}

@@ -9,3 +9,9 @@
 .foto{
     margin-left: 100px;
 }
+
+#tarjetacontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
