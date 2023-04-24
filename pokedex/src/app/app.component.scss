@@ -4,16 +4,30 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 70px;
+    user-select: none;
     padding: 0 20px;
     background: linear-gradient(90deg, rgba(119,0,0,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+    a{
+        text-decoration: none;
+        color: $texto-blanco;
+        font-size: 2.5em;
+        border: 2px solid black;
+        border-radius: 70px;
+        width: 300px;
+        text-align: center;
+        height: 60px;
+        line-height: 55px;
+        background-color: #a11717;
+}
 }
 
 #container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(122, 0, 0);
+    background: #7a0000;
     width: 300px;
     height: 60px;
     border: 3px solid black;
@@ -28,6 +42,19 @@ header{
 
     img{
         height: 60px;
+    }
+}
+
+footer{
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #7a0000;
+    padding: 0 40px;
+    color: $texto-blanco;
+
+    p{
+        margin-left: 10%;
     }
 }
 

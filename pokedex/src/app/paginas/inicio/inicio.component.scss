@@ -1,0 +1,11 @@
+#container{
+    height: calc(100vh - 110px);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    background: linear-gradient(180deg, #240000 0%, #790909 35%, #ff0000 60%, #240000 100%);
+}
+
+.foto{
+    margin-left: 100px;
+}

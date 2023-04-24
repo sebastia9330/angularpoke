@@ -1,0 +1,14 @@
+#container{
+    border: 6px solid #966203;
+    outline: 8px solid #380000;
+    max-width: 480px;
+    aspect-ratio: 1;
+    border-radius: 25px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #e7e7e7,
+        #5f5f5f 15px,
+        #34595e 15px,
+        #34595e 30px
+    );
+}
