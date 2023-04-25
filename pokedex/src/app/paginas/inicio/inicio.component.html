@@ -1,6 +1,6 @@
 <main id="container">
     <app-foto-pokemon class="foto"></app-foto-pokemon>  
-    <div id="tarjetacontainer">
+    <div id="tarjetacontainer" #tarjetas (scroll)="onScroll($event)">
         <app-tarjeta-pokemon *ngFor="let pokemon of listacompleta" [data]="pokemon"></app-tarjeta-pokemon>
     </div>  
 

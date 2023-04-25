@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Resultado } from 'src/app/interfaces/pokeapi';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
@@ -10,16 +10,32 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 export class InicioComponent implements OnInit{
 
   constructor(private pokemonService: PokemonService){}
+  @ViewChild('tarjetas') tarjetasElement!:ElementRef;
 
   listacompleta:Resultado[] = []
+
+  pagina:number = 1;
+  cargando:boolean = false;
   
   ngOnInit(): void {
     this.listapoke();
+    this.pokemonService.getById("1");
   }
 
   async listapoke(){
-    this.listacompleta = [...this.listacompleta, ...await this.pokemonService.getByPage()];
-    console.log(this.listacompleta)
+    this.cargando = true;
+    this.listacompleta = [...this.listacompleta, ...await this.pokemonService.getByPage(this.pagina)];
+    this.cargando = false;
+    this.pagina++;
+  }
+
+  onScroll(e:any){
+    if(this.cargando) return;
+     console.log(e);
+     if(Math.round(this.tarjetasElement.nativeElement.clientHeight + this.tarjetasElement.nativeElement.scrollTop) === e.srcElement.scrollHeight){
+       this.listapoke();
+     }
+     
   }
 
 }
