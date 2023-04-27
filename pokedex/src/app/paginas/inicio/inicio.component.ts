@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Resultado } from 'src/app/interfaces/pokeapi';
+import { Pokemon } from 'src/app/interfaces/pokemon';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
@@ -16,6 +17,7 @@ export class InicioComponent implements OnInit{
 
   pagina:number = 1;
   cargando:boolean = false;
+  pokemonSeleccionado?:Pokemon;
   
   ngOnInit(): void {
     this.listapoke();
@@ -36,6 +38,10 @@ export class InicioComponent implements OnInit{
        this.listapoke();
      }
      
+  }
+
+  async tarjetaSeleccionada(e:string){
+    this.pokemonSeleccionado = await this.pokemonService.getById(e);
   }
 
 }

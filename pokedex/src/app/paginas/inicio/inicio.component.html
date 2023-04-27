@@ -1,7 +1,11 @@
 <main id="container">
-    <app-foto-pokemon class="foto"></app-foto-pokemon>  
+    <app-foto-pokemon>
+        [pokemon]="pokemonSeleccionado"
+    </app-foto-pokemon>  
     <div id="tarjetacontainer" #tarjetas (scroll)="onScroll($event)">
-        <app-tarjeta-pokemon *ngFor="let pokemon of listacompleta" [data]="pokemon"></app-tarjeta-pokemon>
+        <app-tarjeta-pokemon *ngFor="let pokemon of listacompleta" [data]="pokemon">
+            (seleccionado)="tarjetaSeleccionada($event)"
+        </app-tarjeta-pokemon>
     </div>  
 
 </main>
