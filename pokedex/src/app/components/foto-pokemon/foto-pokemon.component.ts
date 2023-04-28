@@ -8,6 +8,6 @@ import { Pokemon } from 'src/app/interfaces/pokemon';
 })
 export class FotoPokemonComponent {
 
-  @Input() Pokemon?:Pokemon;
+  @Input() pokemon?:Pokemon;
   
 }

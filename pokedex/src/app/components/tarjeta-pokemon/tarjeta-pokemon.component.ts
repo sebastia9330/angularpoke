@@ -15,7 +15,8 @@ export class TarjetaPokemonComponent implements OnChanges{
   }
 
   @Input() data?:Resultado;
-  @Output() seleccionado = new EventEmitter<string>();
+  @Input() selecc:boolean = false;
+  @Output() selec = new EventEmitter<string>();
   id:string = "0";
 
   extraeId(){
