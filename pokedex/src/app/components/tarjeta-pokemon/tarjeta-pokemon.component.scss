@@ -2,17 +2,18 @@
     position: relative;
     display: flex;
     align-items: center;
-    &.seleccionado::before{
+    &.selecc::before{
         position: absolute;
         content: "";
         width: calc(100% + 10px);
         height: 120%;
         left: -5px;
-        background-color: #ffee0065;
-        border-radius: 5px;
+        background-color: #d9ff0062;
+        border-radius: 15px;
     }
     
     .flecha{
+        position: absolute;
         height: 30px;
         padding-right: 10px;
     }
@@ -26,9 +27,10 @@
     align-items: center;
     background-color: #f0f0d6;
     border-radius: 25px 5px 5px 25px;
-    width: 100%;
+    width: 89%;
     font-size: large;
     padding: 10px;
+    margin-left: 35px;
 
     .poke{
         height: 50px;
