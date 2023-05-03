@@ -1,6 +1,6 @@
-<div id="container">
-    <img class="flecha" src="./../../../assets/img/play-button.svg">
-    <div id="tarjeta" (click)="seleccionado.emit(id)">
+<div id="container" [ngClass]="{selecc: selecc}">
+    <img class="flecha" src="./../../../assets/img/play-button.svg" *ngIf="selecc">
+    <div id="tarjeta" (click)="selec.emit(id)">
         <div></div>
         <img class="poke" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{id}}.png">
         <span>No. {{id}}</span>

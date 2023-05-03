@@ -6,7 +6,7 @@
     background: linear-gradient(180deg, #240000 0%, #790909 35%, #ff0000 60%, #240000 100%);
 }
 
-.foto{
+#fotopoke{
     margin-left: 100px;
 }
 
@@ -16,4 +16,5 @@
     gap: 10px;
     max-height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
