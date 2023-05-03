@@ -42,10 +42,9 @@ export class InicioComponent implements OnInit{
 
   async tarjetaSeleccionada(id:string){
     this.pokemonSeleccionado = await this.pokemonService.getById(id);
-<<<<<<< HEAD
+
     console.log(id)
-=======
->>>>>>> bb6a09cef593780324a1c1d5c0e2c40eec43d206
+
   }
 
 }

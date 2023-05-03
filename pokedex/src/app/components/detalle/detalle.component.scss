@@ -1,0 +1,19 @@
+#container{
+    height: 550px;
+    width: 98vw;
+    background-color: #d8d8d4;
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+
+    .area:first-child{
+
+    }
+
+    area{
+
+    }
+
+    .area:last-child{
+        
+    }
+}
