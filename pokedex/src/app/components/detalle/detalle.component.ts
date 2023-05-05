@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Pokemon } from 'src/app/interfaces/pokemon';
 
 @Component({
   selector: 'app-detalle',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class DetalleComponent {
 
+
+    @Input() pokemon?: Pokemon;
 }

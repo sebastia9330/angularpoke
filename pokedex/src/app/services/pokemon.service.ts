@@ -24,7 +24,8 @@ export class PokemonService {
     return await res.json();
   }
 
-  getDescripcion(){
-
+  async getDescripcion(id:string){
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    const resJson = await res.json();
   }
 }

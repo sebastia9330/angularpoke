@@ -6,14 +6,16 @@
     grid-template-rows: 1fr 3fr 3fr;
 
     .area:first-child{
-
+        flex-grow: 1;
+        background-color: #0bd2e086;
     }
 
-    area{
-
+    .area{
+        padding-left: 50%;
+        background-color: #948143a9;
     }
 
     .area:last-child{
-        
+        background-color: #7e878886;
     }
 }
