@@ -1,4 +1,5 @@
 <div id="container">
+    <div class="datos">
     <div class="area">
         <app-tarjeta-pokemon
         [fullData]="pokemon">            
@@ -18,4 +19,8 @@
             <div></div>
         </div>
     </div>
+</div>
+    <button (click)="clicked.emit()">
+        <img src="./../../../assets/img/play-button.svg" [ngClass]="{abierto: abierto}">
+    </button>
 </div>
