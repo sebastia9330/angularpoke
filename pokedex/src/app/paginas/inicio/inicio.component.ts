@@ -34,14 +34,18 @@ export class InicioComponent implements OnInit{
 
   onScroll(e:any){
     if(this.cargando) return;
-     console.log(e);
-     if(Math.round(this.tarjetasElement.nativeElement.clientHeight + this.tarjetasElement.nativeElement.scrollTop) === e.srcElement.scrollHeight){
+     if(
+      Math.round(
+        this.tarjetasElement.nativeElement.clientHeight + this.tarjetasElement.nativeElement.scrollTop) === e.srcElement.scrollHeight){
        this.listapoke();
      }
      
   }
 
   async tarjetaSeleccionada(id:string){
+    if(this.pokemonSeleccionado && id === this.pokemonSeleccionado?.id.toString()){
+      return this.cambiarEstado()
+    }
     this.pokemonSeleccionado = await this.pokemonService.getById(id);
 
   }
