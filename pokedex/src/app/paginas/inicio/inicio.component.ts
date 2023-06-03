@@ -18,6 +18,7 @@ export class InicioComponent implements OnInit{
   pagina:number = 1;
   cargando:boolean = false;
   pokemonSeleccionado?:Pokemon;
+  detalle:boolean = false;
   
   ngOnInit(): void {
     this.listapoke();
@@ -43,8 +44,11 @@ export class InicioComponent implements OnInit{
   async tarjetaSeleccionada(id:string){
     this.pokemonSeleccionado = await this.pokemonService.getById(id);
 
-    console.log(id)
+  }
 
+  cambiarEstado(){
+    if(this.pokemonSeleccionado)
+    this.detalle = !this.detalle
   }
 
 }
