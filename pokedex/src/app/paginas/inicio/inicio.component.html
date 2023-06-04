@@ -12,7 +12,8 @@
     <div id="tarjetacontainer" #tarjetas (scroll)="onScroll($event)">
         <app-tarjeta-pokemon *ngFor="let pokemon of listacompleta" [data]="pokemon"
         [selecc] = "pokemon.name === pokemonSeleccionado?.name"    
-        (selec)="tarjetaSeleccionada($event)">
+        (selec)="tarjetaSeleccionada($event)"
+        >
         </app-tarjeta-pokemon>
     </div>  
 
