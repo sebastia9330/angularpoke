@@ -31,6 +31,10 @@
     font-size: large;
     padding: 10px;
     margin-left: 35px;
+    &.selecc{
+        background-color: #6ef445;
+        box-shadow: inset 0px 0px 7px 4px #fcea68;
+    }
 
     .poke{
         height: 50px;
